@@ -60,9 +60,9 @@ public class HotelController {
         return ResponseEntity.status(HttpStatus.CREATED).body(hotelService.addAmenity(id, amenities));
     }
 
-    @GetMapping("/histogramm/{param}")
+    @GetMapping("/histogram/{param}")
     @Operation(summary = "Получить гистограмму по параметру (brand, city, country, amenities)")
-    public ResponseEntity<Map<String, Long>> getHistogramm(@PathVariable String param) {
+    public ResponseEntity<Map<String, Long>> getHistogram(@PathVariable String param) {
         return ResponseEntity.ok().body(hotelService.getHistogram(param));
     }
 }
